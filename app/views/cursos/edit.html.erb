@@ -1,0 +1,28 @@
+<h1> edit </h1>
+
+<%= form_for @curso do |f| %>
+<div>
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+</div>
+<div>
+    <%= f.label :id_curso %>
+    <%= f.text_field :id_curso %>
+</div>
+<div>
+    <%= f.label :uuid %>
+    <%= f.text_field :uuid %>
+</div>
+<div>
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+</div>
+<div>
+    <%= f.label :nestudiantes %>
+    <%= f.text_field :nestudiantes %>
+</div>
+<div>
+    <%= f.submit %>
+    </div>
+
+<% end %>

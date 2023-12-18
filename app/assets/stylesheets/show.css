@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#box{
+    padding: 20px;
+}
+
+.custom-button {
+    padding: 10px 15px;
+    background-color: #168aff; /* Azul marino */
+    color: #ffffff; /* Letras blancas */
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 10px 0; /* Espaciado arriba y abajo */
+    text-decoration: none; /* Quitar subrayado en el enlace */
+    font-size: medium;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #00203f; /* Cambia de color al pasar el ratón sobre el botón */
+    color: white;
+  }
+
+  .custom-button:visited {
+    color: #ffffff; /* Mantener el color blanco después de ser visitado */
+  }

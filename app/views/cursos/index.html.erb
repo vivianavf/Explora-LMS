@@ -1,0 +1,25 @@
+<h1>CURSOS</h1>
+<%= link_to "nuevo", new_curso_path %>
+<table>
+    <thead>
+      <tr>
+        <th>ID Curso</th>
+        <th>Unique ID</th>
+        <th>Nombre</th>
+        <th>Codigo</th>
+        <th>Numero de Estudiantes</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @curso.each do |data|%>
+      <tr>
+        <td><%= data.id_curso %></td>
+        <td><%= data.uuid %></td>
+        <td><%= data.nombre %></td>
+        <td><%= data.codigo %></td>
+        <td><%= data.nestudiantes %></td>
+        <td><%= link_to "editar", edit_curso_path(data) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>

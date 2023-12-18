@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Lista del Curso</title>
+</head>
+<body>
+  <p style="color: green"><%= notice %></p>
+
+<h1>Lista del Curso</h1>
+
+
+<%= link_to new_user_path do %>
+  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+    <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/>
+  </svg>
+<% end %>
+
+<%# 
+<div id="users">
+  <% @users.each do |user| %
+    <%= render user 
+    <p>
+      <%= link_to "Show this user", user %
+    </p>
+  <% end %
+</div> %>
+
+<table id="users">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Nombre</th>
+      <th>Apodo</th>
+      <th>Correo</th>
+      <th>Zona Horaria</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr class="user-row">
+        <td><%= user.user_id %></td>
+        <td id="nombre"><%= link_to "#{user.nombre} #{user.apellido}", user %></td>
+        <td><%= user.apodo %></td>
+        <td><%= user.correo %></td>
+        <td><%= user.zona_horaria %></td>
+        <td><%= user.descripcion %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</body>
+</html>
+
+
+
+
+

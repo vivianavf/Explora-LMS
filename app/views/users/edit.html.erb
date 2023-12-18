@@ -1,0 +1,16 @@
+<h1>Editing user</h1>
+
+<%= render "form", user: @user %>
+
+<br>
+
+<div id="box">
+  <button class="custom-button">
+    <%= link_to "Show this user", @user %>
+  </button>
+
+  <button class="custom-button">
+    <%= link_to "Back to users", users_path %>
+  </button>
+
+</div>
