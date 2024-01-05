@@ -10,25 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_18_070447) do
-  create_table "cursos", force: :cascade do |t|
-    t.integer "id_curso"
-    t.string "uuid"
-    t.string "nombre"
-    t.string "codigo"
-    t.integer "nestudiantes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema[7.1].define(version: 2023_12_20_223430) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
-    t.string "user_id"
-    t.string "nombre"
-    t.string "apellido"
-    t.string "apodo"
-    t.string "correo"
-    t.string "zona_horaria"
-    t.string "descripcion"
+  create_table "bookmarks", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.string "position"
+    t.string "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

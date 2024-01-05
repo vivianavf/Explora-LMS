@@ -69,4 +69,5 @@ group :test do
 end
 
 gem 'faker'
-
+gem 'pg', '~> 1.1'
+gem 'rest-client'

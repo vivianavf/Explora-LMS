@@ -4,22 +4,52 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem "sqlite3"
 #
-default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+# default: &default
+#   adapter: sqlite3
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   timeout: 5000
 
-development:
-  <<: *default
-  database: storage/development.sqlite3
+# development:
+#   <<: *default
+#   database: storage/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+# test:
+#   <<: *default
+#   database: storage/test.sqlite3
+
+# production:
+#   <<: *default
+#   database: storage/production.sqlite3
+
+### CANVAS
+# do not create a queue: section for your test environment
 test:
-  <<: *default
-  database: storage/test.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: canvas_test
+  host: localhost
+  username: canvas
+  password: vivianavera
+  timeout: 5000
+
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: canvas_development
+  password: vivianavera
+  timeout: 5000
+  # secondary:
+  #   replica: true
+  #   username: canvas_readonly_user
 
 production:
-  <<: *default
-  database: storage/production.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: canvas_production
+  host: localhost
+  username: canvas
+  password: vivianavera
+  timeout: 5000

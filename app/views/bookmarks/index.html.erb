@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Bookmarks</h1>
+<%= link_to "New bookmark", new_bookmark_path %>
+
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>URL</th>
+        <th>Position</th>
+        <th>Data</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @bookmarks.each do |bookmark|%>
+      <tr>
+        <td><%= bookmark.name %></td>
+        <td><%= bookmark.url %></td>
+        <td><%= bookmark.position %></td>
+        <td><%= bookmark.data %></td>
+        <td><%= link_to "Show this bookmark", bookmark %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
